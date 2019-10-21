@@ -5,12 +5,12 @@ function KAGWindow_createMenus()
 {
 	// この関数は MainWindow クラスのオブジェクトのコンテキスト上で実行されます
 
-	menu.add(this.systemMenu = new KAGMenuItem(this, "システム(&S)", 0, "", false));
+	menu.add(this.systemMenu = new KAGMenuItem(this, "System(&S)", 0, "", false));
 
-	systemMenu.add(this.rightClickMenuItem = new KAGMenuItem(this, "メッセージを消す(&S)", 0,
+	systemMenu.add(this.rightClickMenuItem = new KAGMenuItem(this, "Hide messages(&S)", 0,
 		onRightClickMenuItemClick, false));
 
-	systemMenu.add(this.showHistoryMenuItem = new KAGMenuItem(this, "メッセージ履歴の表示(&H)", 0,
+	systemMenu.add(this.showHistoryMenuItem = new KAGMenuItem(this, "View message history(&H)", 0,
 		onShowHistoryMenuItemClick, false));
 
 	systemMenu.add(this.skipToNextStopMenuItem = new KAGMenuItem(this,
@@ -23,53 +23,53 @@ function KAGWindow_createMenus()
 	systemMenu.add(this.autoModeWaitMenu = new KAGMenuItem(this, "自動的に読み進むウェイト(&D)", 0,
 		void, false));
 
-		autoModeWaitMenu.add(this.autoModeFastMenuItem = new KAGMenuItem(this, "短い(&1)", 1,
+		autoModeWaitMenu.add(this.autoModeFastMenuItem = new KAGMenuItem(this, "Short(&1)", 1,
 			onAutoModeWaitMenuClick, false));
 		autoModeFastMenuItem.wait = autoModePageWaits.fast;
 		autoModeFastMenuItem.lwait = autoModeLineWaits.fast;
-		autoModeWaitMenu.add(this.autoModeFasterMenuItem = new KAGMenuItem(this, "やや短い(&2)", 1,
+		autoModeWaitMenu.add(this.autoModeFasterMenuItem = new KAGMenuItem(this, "Shorter(&2)", 1,
 			onAutoModeWaitMenuClick, false));
 		autoModeFasterMenuItem.wait = autoModePageWaits.faster;
 		autoModeFasterMenuItem.lwait = autoModeLineWaits.faster;
-		autoModeWaitMenu.add(this.autoModeMediumMenuItem = new KAGMenuItem(this, "普通(&3)", 1,
+		autoModeWaitMenu.add(this.autoModeMediumMenuItem = new KAGMenuItem(this, "Normal(&3)", 1,
 			onAutoModeWaitMenuClick, false));
 		autoModeMediumMenuItem.wait = autoModePageWaits.medium;
 		autoModeMediumMenuItem.lwait = autoModeLineWaits.medium;
-		autoModeWaitMenu.add(this.autoModeSlowerMenuItem = new KAGMenuItem(this, "やや長い(&4)", 1,
+		autoModeWaitMenu.add(this.autoModeSlowerMenuItem = new KAGMenuItem(this, "Longer(&4)", 1,
 			onAutoModeWaitMenuClick, false));
 		autoModeSlowerMenuItem.wait = autoModePageWaits.slower;
 		autoModeSlowerMenuItem.lwait = autoModeLineWaits.slower;
-		autoModeWaitMenu.add(this.autoModeSlowMenuItem = new KAGMenuItem(this, "長い(&5)", 1,
+		autoModeWaitMenu.add(this.autoModeSlowMenuItem = new KAGMenuItem(this, "Long(&5)", 1,
 			onAutoModeWaitMenuClick, false));
 		autoModeSlowMenuItem.wait = autoModePageWaits.slow;
 		autoModeSlowMenuItem.lwait = autoModeLineWaits.slow;
 
 	systemMenu.add(new MenuItem(this, "-"));
 
-	systemMenu.add(this.goBackMenuItem = new KAGMenuItem(this, "前に戻る(&B)", 0,
+	systemMenu.add(this.goBackMenuItem = new KAGMenuItem(this, "Back(&B)", 0,
 		onBackStartMenuItemClick, false));
 
-	systemMenu.add(this.goToStartMenuItem = new KAGMenuItem(this, "最初に戻る(&R)", 0,
+	systemMenu.add(this.goToStartMenuItem = new KAGMenuItem(this, "Back to recent(&R)", 0,
 		onGoToStartMenuItemClick, false));
 
 	systemMenu.add(new MenuItem(this, "-"));
 
-	systemMenu.add(this.exitMenuItem = new KAGMenuItem(this, "終了(&X)", 0, onExitMenuItemClick, false));
+	systemMenu.add(this.exitMenuItem = new KAGMenuItem(this, "End(&X)", 0, onExitMenuItemClick, false));
 
-	menu.add(this.characterMenu = new KAGMenuItem(this, "文字表示(&C)", 0, void, false));
+	menu.add(this.characterMenu = new KAGMenuItem(this, "Text(&C)", 0, void, false));
 
-		characterMenu.add(this.chSpeedMenu = new KAGMenuItem(this, "表示速度(&C)", 0, void, false));
+		characterMenu.add(this.chSpeedMenu = new KAGMenuItem(this, "Text speed(&C)", 0, void, false));
 
-			chSpeedMenu.add(this.chNoWaitMenuItem = new KAGMenuItem(this, "ノーウェイト(&W)", 1,
+			chSpeedMenu.add(this.chNoWaitMenuItem = new KAGMenuItem(this, "No wait(&W)", 1,
 				onChSpeedMenuItemClick, false));
 			chNoWaitMenuItem.speed = 0;
-			chSpeedMenu.add(this.chFastMenuItem = new KAGMenuItem(this, "高速(&F)", 1,
+			chSpeedMenu.add(this.chFastMenuItem = new KAGMenuItem(this, "Fast(&F)", 1,
 				onChSpeedMenuItemClick, false));
 			chFastMenuItem.speed = chSpeeds.fast;
-			chSpeedMenu.add(this.chNormalMenuItem = new KAGMenuItem(this, "普通(&N)", 1,
+			chSpeedMenu.add(this.chNormalMenuItem = new KAGMenuItem(this, "Normal(&N)", 1,
 				onChSpeedMenuItemClick, false));
 			chNormalMenuItem.speed = chSpeeds.normal;
-			chSpeedMenu.add(this.chSlowMenuItem = new KAGMenuItem(this, "遅い(&S)", 1,
+			chSpeedMenu.add(this.chSlowMenuItem = new KAGMenuItem(this, "Slow(&S)", 1,
 				onChSpeedMenuItemClick, false));
 			chSlowMenuItem.speed = chSpeeds.slow;
 
