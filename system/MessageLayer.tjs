@@ -288,7 +288,7 @@ class MessageLayer extends KAGLayer
 	/*CS*/var defaultBold = true; // デフォルトでボールドで描画するか
 	/*C*/var bold; // ボールドで描画するか
 	/*CS*/var defaultFace = "user"; // デフォルトのフォント
-	/*C*/var userFace = "ＭＳ Ｐ明朝"; // ユーザの選んだフォント
+	/*C*/var userFace = "ＭＳ Ｐ明朝"; // ユーザの選んだフォント original ＭＳ Ｐ明朝
 	/*C*/var fontFace; // フォント
 	/*CS*/var defaultChColor = 0xffffff; // デフォルトの文字色
 	/*C*/var chColor; // 文字色

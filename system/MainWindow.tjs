@@ -12,11 +12,11 @@ class KAGWindow extends Window
 	// 以下のうち、/*C*/ のつく変数は、末端の perl スクリプトによって
 	// 自動的に栞にコピーされるコードが生成される変数
 
-	var scWidth = 640; // 画面横幅
-	var scHeight = 480; // 画面縦幅
+	var scWidth = 1920; // 画面横幅 //640 original
+	var scHeight = 1080; // 画面縦幅 //480 original
 
-	var aboutWidth = 320; // 「このソフトについて」ウィンドウの横幅
-	var aboutHeight = 200; // 同縦幅
+	var aboutWidth = 320*2; // 「このソフトについて」ウィンドウの横幅
+	var aboutHeight = 200*2; // 同縦幅
 
 	var isFirstProcess = true; // 一番最初の process の呼び出しかどうか
 

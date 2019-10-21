@@ -88,8 +88,8 @@ class YesNoDialogWindow extends Window
 		add(yesButton = new ButtonLayer(this, primaryLayer));
 		yesButton.caption = "はい";
 		yesButton.captionColor = clBtnText;
-		yesButton.width = 70;
-		yesButton.height = 25;
+		yesButton.width = 70; //original 70
+		yesButton.height = 25; //original 25
 		yesButton.top = th + 35;
 		yesButton.left = (w - (70*2 + 10)>>1);
 		yesButton.visible = true;
@@ -98,8 +98,8 @@ class YesNoDialogWindow extends Window
 		add(noButton = new ButtonLayer(this, primaryLayer));
 		noButton.caption = "いいえ";
 		noButton.captionColor = clBtnText;
-		noButton.width = 70;
-		noButton.height = 25;
+		noButton.width = 70; //original 70
+		noButton.height = 25; //original 25
 		noButton.top = th + 35;
 		noButton.left = ((w - (70*2 + 10))>>1) + 70 + 10;
 		noButton.visible = true;

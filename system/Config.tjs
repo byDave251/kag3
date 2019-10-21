@@ -54,8 +54,8 @@ function KAGWindow_config()
 // scWidth に画面の幅、scHeight に画面の高さをピクセル単位で指定します。
 // 標準的に使われている 640x480 や 800x600 のような画面サイズではないサイズ
 // に設定すると、フルスクリーンにできない場合があります。
-;scWidth = 640;
-;scHeight = 480;
+;scWidth = 1920; //original 640
+;scHeight = 1080; //original 480
 
 
 // ◆ 読みとり専用モード
@@ -326,8 +326,8 @@ function KAGWindow_config()
 // ◆ 「ヘルプ > このソフトについて」を選択したときにでる
 // ウィンドウの表示領域のサイズ
 // このメニューを選択すると about.ks がそのウィンドウ内で実行されます。
-;aboutWidth = 320; // 幅
-;aboutHeight = 200; // 高さ
+;aboutWidth = 320*2; // 幅 //original 320
+;aboutHeight = 200*2; // 高さ //original 200
 
 
 // ◆ ウィンドウや動作の追加の設定
@@ -524,7 +524,7 @@ function MessageLayer_config()
 
 // ◆ 文字の大きさ
 // デフォルトの文字の大きさ ( 高さ ) を pixel 単位で指定します。
-;defaultFontSize = 24;  // deffont タグの size 属性に相当
+;defaultFontSize = 24*1.5;  // deffont タグの size 属性に相当 //original 24
 
 
 // ◆ 行間
@@ -547,17 +547,17 @@ function MessageLayer_config()
 // (あるいはシステム変数ファイルを消してください)
 // カンマで区切って複数のフォントを指定することができます。その場合は、最初
 // の方に書いたフォントが存在すれば、優先されます。
-;userFace = "ＭＳ Ｐ明朝"; // deffont タグの face 属性に相当
+;userFace = "ＭＳ Ｐ明朝"; // deffont タグの face 属性に相当  //original ＭＳ Ｐ明朝
 
 
 // ◆ 文字の色
 // デフォルトの文字の色を 0xRRGGBB 形式で指定します。
-;defaultChColor = 0xffffff;  // deffont タグの color 属性に相当
+;defaultChColor = 0x000000;  // deffont タグの color 属性に相当 //original 0xffffff
 
 
 // ◆ 文字をボールドにするか
 // する場合は true, しない場合は false を指定します。
-;defaultBold = true; // deffont タグの bold 属性に相当
+;defaultBold = false; // deffont タグの bold 属性に相当 //original true
 
 
 // ◆ ルビサイズ
@@ -586,7 +586,7 @@ function MessageLayer_config()
 
 // ◆ 影を描画するか
 // する場合は true, しない場合は false を指定します。
-;defaultShadow = true;  // deffont タグの shadow 属性に相当
+;defaultShadow = false;  // deffont タグの shadow 属性に相当 //original true
 
 
 // ◆ 縁取りをするか
@@ -698,7 +698,7 @@ function HistoryLayer_config()
 
 
 // ◆ フォント名
-;fontName = "ＭＳ Ｐ明朝";
+;fontName = "ＭＳ Ｐ明朝"; //original ＭＳ Ｐ明朝
 
 
 // ◆ フォントを太字にするか
@@ -706,11 +706,11 @@ function HistoryLayer_config()
 
 
 // ◆ フォントのサイズ ( pixel単位)
-;fontHeight = 24;
+;fontHeight = 24*1.5; //original 24
 
 
 // ◆ ラインの高さ
-;lineHeight = 26;
+;lineHeight = 26*1.5; //original 26
 
 
 // ◆ 縦書きの場合は true
@@ -732,8 +732,8 @@ function HistoryLayer_config()
 // 「◆ ページ単位での閲覧を行うかどうか」を true に設定した場合は
 // maxPages をページ単位で、false に設定した場合は maxLines を行単位で
 // 指定してください。
-;maxPages = 100;
-;maxLines = 2000;
+;maxPages = 100; //look later
+;maxLines = 2000; //look later
 
 
 // ◆ 栞にメッセージ履歴を保存するか
