@@ -172,7 +172,7 @@ class YesNoDialogWindow extends Window
 }
 
 // Yes か No かはっきりさせる関数
-function askYesNo(message, caption = "確認")
+function askYesNo(message, caption = "Confirm")
 {
 	var win = new YesNoDialogWindow(message, caption);
 	win.showModal();
