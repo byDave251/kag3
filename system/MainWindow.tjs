@@ -523,7 +523,7 @@ class KAGWindow extends Window
 	{
 		saveSystemVariables();
 		if(!askOnClose) { super.onCloseQuery(true); return; }
-		super.onCloseQuery(askYesNo("終了しますか？"));
+		super.onCloseQuery(askYesNo("Do you want to leave the game?"));
 	}
 
 	function close()
@@ -1624,7 +1624,7 @@ class KAGWindow extends Window
 		var result;
 		if(ask)
 		{
-			var prompt = "「"+ historyOfStore[0].core.currentPageName + "」まで戻りますか?";
+			var prompt = "Do you want to go back to 「"+ historyOfStore[0].core.currentPageName + "」?";
 			result = askYesNo(prompt);
 		}
 		else
@@ -1705,7 +1705,7 @@ class KAGWindow extends Window
 				{
 					// 栞が存在しない
 					var item = children[i];
-					item.caption = "(未設定)";
+					item.caption = "(empty)";
 					item.enabled = false;
 					item.orgEnabled = !bookMarkProtectedStates[i];
 				}
@@ -1732,7 +1732,7 @@ class KAGWindow extends Window
 				else
 				{
 					var item = restoreMenu.children[i];
-					item.caption = "(未設定)";
+					item.caption = "(empty)";
 					item.enabled = false;
 					item.orgEnabled = false;
 				}
@@ -1768,7 +1768,7 @@ class KAGWindow extends Window
 		// 栞番号 num のブックマーク名を得る
 		if(bookMarkDates[num] != '') // 空文字列の場合は栞がないということ
 			return bookMarkNames[num];
-		return "(未設定)";
+		return "(empty)";
 	}
 
 	function getBookMarkDate(num)
@@ -2024,11 +2024,11 @@ class KAGWindow extends Window
 		// そのとき、設定するかどうかをたずねる
 		if(readOnlyMode) return false;
 		if(bookMarkProtectedStates[num]) return false;
-		var prompt = "栞 ";
-		if(num < numBookMarks) prompt += (num + 1);
-		if(bookMarkDates[num] != "") // bookMarkDates が空文字の場合は栞は存在しない
-			prompt += "「" + bookMarkNames[num] + "」";
-		prompt += "に「"+ pcflags.currentPageName + "」をはさみますか?";
+		var prompt = "Do you want to save this bookmark?";
+		//if(num < numBookMarks) prompt += (num + 1);
+		//if(bookMarkDates[num] != "") // bookMarkDates が空文字の場合は栞は存在しない
+		//	prompt += "「" + bookMarkNames[num] + "」";
+		//prompt += "に「"+ pcflags.currentPageName + "」をはさみますか?";
 		var result = askYesNo(prompt);
 		if(result) return saveBookMark(num);
 		return false;
@@ -2040,9 +2040,9 @@ class KAGWindow extends Window
 		// そのとき、読み出すかどうかをたずねる
 		if(num < numBookMarks && bookMarkDates[num] == "") // bookMarkDates が空文字の場合は栞は存在しない
 			return false;
-		var prompt = "栞 ";
-		if(num < numBookMarks) prompt += (num + 1);
-		prompt += "「"+ bookMarkNames[num] + "」をたどりますか?";
+		var prompt = "Do you want to load this bookmark?";
+		//if(num < numBookMarks) prompt += (num + 1);
+		//prompt += "「"+ bookMarkNames[num] + "」をたどりますか?";
 		var result = askYesNo(prompt);
 		if(result) return loadBookMark(num);
 		return false;

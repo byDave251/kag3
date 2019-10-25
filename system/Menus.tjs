@@ -14,7 +14,7 @@ function KAGWindow_createMenus()
 		onShowHistoryMenuItemClick, false));
 
 	systemMenu.add(this.skipToNextStopMenuItem = new KAGMenuItem(this,
-		autoRecordPageShowing?"Go to next choise/unread(&F)":"Go to next choise(&F)", 0,
+		autoRecordPageShowing?"Go to next choice/unread(&F)":"Go to next choice(&F)", 0,
 		onSkipToNextStopMenuItemClick, false));
 
 	systemMenu.add(this.autoModeMenuItem = new KAGMenuItem(this, "Auto mode(&A)", 0,
@@ -78,7 +78,7 @@ function KAGWindow_createMenus()
 			chSpeedMenu.add(this.chNonStopToPageBreakItem = new KAGMenuItem(this, "To the end of the page(&P)", 0,
 				onChNonStopToPageBreakItemClick, false));
 
-		characterMenu.add(this.ch2ndSpeedMenu = new KAGMenuItem(this, "The thing I read only once is(&I)", 0, void, false));
+		characterMenu.add(this.ch2ndSpeedMenu = new KAGMenuItem(this, "Things I read once(&I)", 0, void, false));
 
 			ch2ndSpeedMenu.add(this.ch2ndNoWaitMenuItem = new KAGMenuItem(this, "No wait(&W)", 1,
 				onCh2ndSpeedMenuItemClick, false));
